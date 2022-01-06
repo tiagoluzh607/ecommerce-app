@@ -1,5 +1,7 @@
 /* Geral Aplication */
 
+$gold-color: #f4c142;
+
 :root{
     --ion-background-color: #ededed;
 }
@@ -111,11 +113,39 @@ ion-tab-bar{
 ion-card{
     --background: white;
     background: white;
-    border-radius: 15px;
+	border-radius: 15px;
+	
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+ion-card:hover{
+	transform: scale(1.03);
+	transition-duration: 300ms;
+}
+
+ion-card-header{
+	padding: 0px;
+}
+
+ion-thumbnail img{
+	border-radius: 10px;
 }
 
 ion-item{
     --background: transparent;
+}
+
+.icon-star{
+	color: $gold-color;
+	font-size: 15px;
+	letter-spacing: 0px;
+}
+
+ion-card ion-label .title-card{
+	color: #5c5c5c;
+	font-size: 15px;
+	letter-spacing: 0px;
 }
 
 
