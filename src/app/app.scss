@@ -1,3 +1,9 @@
+/* Geral Aplication */
+
+:root{
+    --ion-background-color: #ededed;
+}
+
 :root{
     --ion-text-color: #888888;
     --ion-text-color-rgb: 136, 136, 136;
@@ -63,6 +69,9 @@
 
 }
 
+
+/* Menu Superior Toolbar */
+
 :root{
     --ion-toolbar-color: white;
 }
@@ -83,6 +92,30 @@ ion-toolbar{
 
 .header-md::after{
     opacity: 0;
+}
+
+/* Menu Inferior - tabbar */
+
+:root{
+    --ion-tab-bar-background: #ffffff;
+    --ion-tab-bar-color: #888888;
+    --ion-tab-bar-color-selected: #2cc883;
+}
+
+ion-tab-bar{
+    border-radius: 20px 20px 0px 0px;
+}
+
+/* Ion-card */
+
+ion-card{
+    --background: white;
+    background: white;
+    border-radius: 15px;
+}
+
+ion-item{
+    --background: transparent;
 }
 
 
