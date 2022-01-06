@@ -246,8 +246,8 @@
 
   "speakers": [
     {
-      "name": "Burt Bear",
-      "profilePic": "/assets/img/speakers/bear.jpg",
+      "name": "Capacete Espacial",
+      "profilePic": "https://drive.google.com/uc?id=192AMq6kOHvD0wOT7Zls2dwQsi1ZI_CBX",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Burt is a Bear. Burt's interests include poetry, dashing space heroes, and lions.",
@@ -258,8 +258,8 @@
       "id": "1"
     },
     {
-      "name": "Charlie Cheetah",
-      "profilePic": "/assets/img/speakers/cheetah.jpg",
+      "name": "Botas Espaciais",
+      "profilePic": "https://drive.google.com/uc?id=1R9kLIoWqNzsWJtGIoasy9mdHWnu9tdyF",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Charlie is a Cheetah. Charlie's interests include country music, plush animals, pyrotechnics, and skeletons.",
@@ -270,8 +270,8 @@
       "id": "2"
     },
     {
-      "name": "Donald Duck",
-      "profilePic": "/assets/img/speakers/duck.jpg",
+      "name": "Bandeira do Brasil",
+      "profilePic": "https://drive.google.com/uc?id=1DiwMfwpkxSMfTeq0lgtBICwdShBgXp81",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Donald is a Duck. Donald's interests include carpentry, superheroes, merpeople, and glam rock.",
@@ -282,8 +282,8 @@
       "id": "3"
     },
     {
-      "name": "Eva Eagle",
-      "profilePic": "/assets/img/speakers/eagle.jpg",
+      "name": "Barra de Cereal Morango",
+      "profilePic": "https://drive.google.com/uc?id=1c45S6qp3nkmF9TtZQFiA_PTdOxbLhGH-",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Eva is an Eagle. Eva's interests include ants, seashells, and cupcakes.",
@@ -294,8 +294,8 @@
       "id": "4"
     },
     {
-      "name": "Ellie Elephant",
-      "profilePic": "/assets/img/speakers/elephant.jpg",
+      "name": "Barra de Cereal Granola e Chocolate",
+      "profilePic": "https://drive.google.com/uc?id=1tVQ8EV5XJW4TMiBjjiz070Ntv0pfVJ1E",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Ellie is an Elephant. Ellie's interests include pocket watches, pool, hand fans, and ninjas.",
@@ -306,8 +306,8 @@
       "id": "5"
     },
     {
-      "name": "Gino Giraffe",
-      "profilePic": "/assets/img/speakers/giraffe.jpg",
+      "name": "6 Barras de Cereais Diversas",
+      "profilePic": "https://drive.google.com/uc?id=198Tl_hui_ePss6PAPdcSZxEFO_8dM_iM",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Gino is a Giraffe. Gino's interests include candy-making, unicorns, and birdhouses.",
@@ -318,8 +318,8 @@
       "id": "6"
     },
     {
-      "name": "Isabella Iguana",
-      "profilePic": "/assets/img/speakers/iguana.jpg",
+      "name": "Uva Passa",
+      "profilePic": "https://drive.google.com/uc?id=1LgTW5YiSGWq0J6G-PzJwkJgcrgNoDwN9",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Isabella is an Iguana. Isabella's interests include crystals, architecture, and candle-making.",
@@ -330,8 +330,8 @@
       "id": "7"
     },
     {
-      "name": "Karl Kitten",
-      "profilePic": "/assets/img/speakers/kitten.jpg",
+      "name": "Frutas Cristalizadas",
+      "profilePic": "https://drive.google.com/uc?id=17CVHtcSSx-6ohavlqkjoE42o5K0Nk8mb",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Karl is a Kitten. Karl's interests include skiing, jewelry, and needlepoint.",
@@ -342,8 +342,8 @@
       "id": "8"
     },
     {
-      "name": "Lionel Lion",
-      "profilePic": "/assets/img/speakers/lion.jpg",
+      "name": "Banana",
+      "profilePic": "https://drive.google.com/uc?id=1OCOlIaehguHAUoGtbHpp7EF7x9ntKhgt",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Lionel is a Lion. Lionel's interests include lizards and mathematics.",
@@ -354,8 +354,8 @@
       "id": "9"
     },
     {
-      "name": "Molly Mouse",
-      "profilePic": "/assets/img/speakers/mouse.jpg",
+      "name": "Maça",
+      "profilePic": "https://drive.google.com/uc?id=13BA4v-B5ptmNqPSJoudsD1kLroO5l0ED",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Molly is a Mouse. Molly's interests include werewolves and magic.",
@@ -366,8 +366,8 @@
       "id": "10"
     },
     {
-      "name": "Paul Puppy",
-      "profilePic": "/assets/img/speakers/puppy.jpg",
+      "name": "Melancia",
+      "profilePic": "https://drive.google.com/uc?id=1dL_dqlGBL_jEFEeNs6I5VwdLgtkiEK1J",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Paul is a Puppy. Paul's interests include maps, whales, and dragons.",
@@ -378,8 +378,8 @@
       "id": "11"
     },
     {
-      "name": "Rachel Rabbit",
-      "profilePic": "/assets/img/speakers/rabbit.jpg",
+      "name": "Pera",
+      "profilePic": "https://drive.google.com/uc?id=1OjXIOexBltZ7iWQkA-m1WXNNnKF5ysAo",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Rachel is a Rabbit. Rachel's interests include clowns, skeletons, and yo-yos.",
@@ -390,8 +390,8 @@
       "id": "12"
     },
     {
-      "name": "Ted Turtle",
-      "profilePic": "/assets/img/speakers/turtle.jpg",
+      "name": "Uva Verde",
+      "profilePic": "https://drive.google.com/uc?id=1D5mU8iwAEruSjxOQgZKDP03ylae5e2py",
       "instagram": "ionicframework",
       "twitter": "ionicframework",
       "about": "Ted is a Turtle. Ted's interests include butterflies, skiing, and cupcakes.",
