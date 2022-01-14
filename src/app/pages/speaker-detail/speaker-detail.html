@@ -20,24 +20,31 @@
     <h2>{{speaker?.name}}</h2>
   </div>
 
-  <div class="ion-padding speaker-detail">
+  <div class="ion-padding speaker-detail conteudo-principal">
+
+    <div class="div-avaliacao text-center">
+      <ion-icon class="icon-star" name="star"></ion-icon>
+      <ion-icon class="icon-star" name="star"></ion-icon>
+      <ion-icon class="icon-star" name="star"></ion-icon>
+      <ion-icon class="icon-star" name="star"></ion-icon>
+      <ion-icon class="icon-star" name="star-outline"></ion-icon>
+    </div>
+    <div class="text-center">
+      <h2>R$ 24,00</h2>
+    </div>
     <p>{{speaker?.about}} Say hello on social media!</p>
-
     <hr>
-
-    <ion-chip color="twitter" button (click)="openExternalUrl('https://twitter.com/' + speaker.twitter)">
-      <ion-icon name="logo-twitter"></ion-icon>
-      <ion-label>Twitter</ion-label>
-    </ion-chip>
-
-    <ion-chip color="dark" button (click)="openExternalUrl('https://github.com/ionic-team/ionic')">
-      <ion-icon name="logo-github"></ion-icon>
-      <ion-label>GitHub</ion-label>
-    </ion-chip>
-
-    <ion-chip color="instagram" button (click)="openExternalUrl('https://instagram.com/ionicframework')">
-      <ion-icon name="logo-instagram"></ion-icon>
-      <ion-label>Instagram</ion-label>
-    </ion-chip>
+    <ion-button class="button-theme" expand="block">
+      <ion-icon slot="start" name="card-outline"></ion-icon>
+      Comprar
+    </ion-button>
+    <ion-button class="button-theme" expand="block">
+      <ion-icon slot="start" name="cart-outline"></ion-icon>
+      Adicionar ao Carrinho
+    </ion-button>
+    <ion-button class="button-theme-outline" expand="block" fill="outline" >
+      <ion-icon slot="start" name="trash-bin-outline"></ion-icon>
+      Remover do Carrinho
+    </ion-button>
   </div>
 </ion-content>
