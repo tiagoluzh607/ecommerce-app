@@ -25,6 +25,8 @@ export class SchedulePage implements OnInit {
   confDate: string;
   showSearchbar: boolean;
 
+  speakers: any[] = [];
+
   constructor(
     public alertCtrl: AlertController,
     public confData: ConferenceData,
@@ -41,6 +43,12 @@ export class SchedulePage implements OnInit {
     this.updateSchedule();
 
     this.ios = this.config.get('mode') === 'ios';
+  }
+
+  ionViewDidEnter() {
+    this.confData.getSpeakers().subscribe((speakers: any[]) => {
+      this.speakers = speakers;
+    });
   }
 
   updateSchedule() {

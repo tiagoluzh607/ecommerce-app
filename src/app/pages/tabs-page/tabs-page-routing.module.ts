@@ -49,6 +49,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'endereco',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../endereco/endereco.module').then(m => m.EnderecoModule)
+          }
+        ]
+      },
+      {
         path: 'about',
         children: [
           {
