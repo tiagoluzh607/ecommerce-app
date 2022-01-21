@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Map',
-      url: '/app/tabs/map',
+      url: '/app/tabs/endereco',
       icon: 'map'
     },
     {

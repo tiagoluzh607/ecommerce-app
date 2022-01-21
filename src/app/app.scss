@@ -121,11 +121,11 @@ ion-card{
 	
 	margin-top: 0px;
 	margin-bottom: 0px;
+	transition-duration: 300ms;
 }
 
 ion-card:hover{
 	transform: scale(1.03);
-	transition-duration: 300ms;
 }
 
 ion-card-header{
@@ -150,6 +150,14 @@ ion-card ion-label .title-card{
 	color: #5c5c5c;
 	font-size: 15px;
 	letter-spacing: 0px;
+}
+
+ion-card-title{
+	margin-bottom: 20px;
+}
+
+.div-botoes-acao-card{
+	margin-top: 20px;
 }
 
 /* Botoes */
