@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Perfil',
-      url: '/app/tabs/about',
+      url: '/app/tabs/perfil',
       icon: 'person'
     }
   ];

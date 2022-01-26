@@ -58,6 +58,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'perfil',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../perfil/perfil.module').then(m => m.PerfilModule)
+          }
+        ]
+      },
+      {
         path: 'about',
         children: [
           {
