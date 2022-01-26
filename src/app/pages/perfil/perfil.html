@@ -7,5 +7,16 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content fullscreen="true">
+  <ion-content>
+    <div class="ion-padding-top ion-text-center">
+      <img src="https://www.gravatar.com/avatar?d=mm&s=140" alt="avatar">
+      <h2>{{username}}</h2>
+  
+      <ion-list inset>
+        <ion-item (click)="updatePicture()">Atualizar Imagem</ion-item>
+        <ion-item (click)="changeUsername()">Atualizar Nome</ion-item>
+        <ion-item (click)="changePassword()">Atualizar Senha</ion-item>
+        <ion-item (click)="logout()">Logout</ion-item>
+      </ion-list>
+    </div>
   </ion-content>
