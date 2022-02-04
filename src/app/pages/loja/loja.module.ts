@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { CardProdutoModule } from '../../components/card-produto/card-produto.module';
 import { LojaPage } from './loja';
 import { LojaPageRoutingModule } from './loja.routing';
 
@@ -10,7 +11,8 @@ import { LojaPageRoutingModule } from './loja.routing';
       CommonModule,
       FormsModule,
       IonicModule,
-      LojaPageRoutingModule
+      LojaPageRoutingModule,
+      CardProdutoModule
     ],
     declarations: [
       LojaPage
