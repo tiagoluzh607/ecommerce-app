@@ -58,6 +58,24 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'loja',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../loja/loja.module').then(m => m.LojaModule)
+          }
+        ]
+      },
+      {
+        path: 'carrinho',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../carrinho/carrinho.module').then(m => m.CarrinhoModule)
+          }
+        ]
+      },
+      {
         path: 'perfil',
         children: [
           {
