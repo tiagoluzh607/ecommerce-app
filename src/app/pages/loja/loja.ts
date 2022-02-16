@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, Config, IonList, IonRouterOutlet, LoadingController, ModalController, ToastController } from '@ionic/angular';
+import { Produto } from '../../dominio/produto/produto.model';
+import { ProdutoService } from '../../dominio/produto/produto.service';
 import { ConferenceData } from '../../providers/conference-data';
 import { UserData } from '../../providers/user-data';
 import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
@@ -26,6 +28,7 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
   showSearchbar: boolean;
 
   speakers: any[] = [];
+  produtos: Produto[] = [];
 
   constructor(
     public alertCtrl: AlertController,
@@ -36,7 +39,8 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
     public routerOutlet: IonRouterOutlet,
     public toastCtrl: ToastController,
     public user: UserData,
-    public config: Config
+    public config: Config,
+    private produtoService: ProdutoService
   ) { }
 
   ngOnInit() {
@@ -49,6 +53,8 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
     this.confData.getSpeakers().subscribe((speakers: any[]) => {
       this.speakers = speakers;
     });
+
+    this.produtos = this.produtoService.selectAll();
   }
 
   updateSchedule() {
