@@ -2,18 +2,20 @@
   <ion-card-header>
     <ion-item detail="false" lines="none" routerLink="/app/tabs/speakers/speaker-details/1">
       <ion-thumbnail slot="start">
-        <img src="https://drive.google.com/uc?id=1OCOlIaehguHAUoGtbHpp7EF7x9ntKhgt" alt="Imagem estatica">
+        <img [src]="produto.imagem" alt="Imagem estatica">
       </ion-thumbnail>
       <ion-label>
-        <h2 class="title-card">Nome Estático</h2>
+        <h2 class="title-card">{{produto.nome}}</h2>
         <div>
-          <ion-icon class="icon-star" name="star"></ion-icon>
-          <ion-icon class="icon-star" name="star"></ion-icon>
-          <ion-icon class="icon-star" name="star"></ion-icon>
-          <ion-icon class="icon-star" name="star"></ion-icon>
-          <ion-icon class="icon-star" name="star-outline"></ion-icon>
+
+          <ng-container *ngFor="let avaliacao of avaliacoes">
+            <ion-icon class="icon-star" name="{{avaliacao?'star':'star-outline'}}"></ion-icon>
+          </ng-container>
+
+          
+
         </div>
-        <p><small>R$</small> 24 <small>,00</small></p>
+        <p><small>R$</small> {{produto.preco}}</p>
       </ion-label>
     </ion-item>
   </ion-card-header>
