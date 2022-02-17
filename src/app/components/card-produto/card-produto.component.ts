@@ -10,6 +10,9 @@ import { Produto } from '../../dominio/produto/produto.model';
 export class CardProdutoComponent {
     @Input() produto: Produto;
     @Output() clicarNoCarrinho: EventEmitter<Produto> = new EventEmitter();
+    @Output() clicarNaLixeira: EventEmitter<Produto> = new EventEmitter();
+    
+    
     avaliacoes: boolean[] = [true,true,false,false,false]
 
     ngOnInit(){
@@ -27,6 +30,13 @@ export class CardProdutoComponent {
         console.log('adicinar no carrinho', this.produto);
         this.clicarNoCarrinho.emit(this.produto);
     }
+
+    cliqueNaLixeira(event: Event){
+        event.stopPropagation();
+        console.log('tirar do carrinho', this.produto);
+        this.clicarNaLixeira.emit(this.produto);
+    }
+
     cliqueNoCard(){
         console.log('abrir o modal', this.produto)
     }

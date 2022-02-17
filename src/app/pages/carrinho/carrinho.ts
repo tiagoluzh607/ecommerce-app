@@ -31,4 +31,8 @@ import { UserData } from '../../providers/user-data';
       return p;
     });
   }
+
+  produtoRemovidoDoCarrinho(produto: Produto){
+    console.log('remover produto da lista', produto);
+  }
 }
