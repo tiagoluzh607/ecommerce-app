@@ -4,4 +4,6 @@ export interface Produto{
     descricao: string;
     avaliacao: number;
     preco: number;
+
+    carrinho?: boolean;
 }

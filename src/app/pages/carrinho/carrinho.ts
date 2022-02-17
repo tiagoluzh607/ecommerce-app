@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { Produto } from '../../dominio/produto/produto.model';
+import { ProdutoService } from '../../dominio/produto/produto.service';
 import { ConferenceData } from '../../providers/conference-data';
 import { UserData } from '../../providers/user-data';
 
@@ -12,12 +14,21 @@ import { UserData } from '../../providers/user-data';
   export class CarrinhoPage {
     
   speakers: any[] = [];
+  produtos: Produto[] = [];
 
-  constructor(public confData: ConferenceData) {}
+  constructor(
+    public confData: ConferenceData,
+    private produtoService: ProdutoService
+    ) {}
 
   ionViewDidEnter() {
     this.confData.getSpeakers().subscribe((speakers: any[]) => {
       this.speakers = speakers;
+    });
+
+    this.produtos = this.produtoService.selectAll().map(p=>{
+      p.carrinho = true;
+      return p;
     });
   }
 }

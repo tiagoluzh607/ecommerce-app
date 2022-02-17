@@ -54,7 +54,10 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
       this.speakers = speakers;
     });
 
-    this.produtos = this.produtoService.selectAll();
+    this.produtos = this.produtoService.selectAll().map(p=>{
+      p.carrinho = false;
+      return p;
+    });
   }
 
   updateSchedule() {
