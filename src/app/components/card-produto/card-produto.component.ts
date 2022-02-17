@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Produto } from '../../dominio/produto/produto.model';
 
 
@@ -9,6 +9,7 @@ import { Produto } from '../../dominio/produto/produto.model';
 })
 export class CardProdutoComponent {
     @Input() produto: Produto;
+    @Output() clicarNoCarrinho: EventEmitter<Produto> = new EventEmitter();
     avaliacoes: boolean[] = [true,true,false,false,false]
 
     ngOnInit(){
@@ -19,5 +20,14 @@ export class CardProdutoComponent {
         // avaliacao 3 = [true,true,true,false,false]
         //avaliacao 4 = [true,true,true,true,false]
         this.avaliacoes = this.avaliacoes.map((a,i)=> i+1 <= avaliacao);
+    }
+
+    cliqueNoCarrinho(event: Event){
+        event.stopPropagation();
+        console.log('adicinar no carrinho', this.produto);
+        this.clicarNoCarrinho.emit(this.produto);
+    }
+    cliqueNoCard(){
+        console.log('abrir o modal', this.produto)
     }
 }

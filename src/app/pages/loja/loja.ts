@@ -151,5 +151,9 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
     await loading.onWillDismiss();
     fab.close();
   }
+
+  produtoAdicionadoNoCarrinho(produto: Produto){
+    console.log('remover produto da lista', produto);
+  }
    
 }
