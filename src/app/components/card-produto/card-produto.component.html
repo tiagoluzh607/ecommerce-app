@@ -15,7 +15,7 @@
           
 
         </div>
-        <p><small>R$</small> {{produto.preco}}</p>
+        <p><small>R$</small> {{formataPreco(produto.preco)}}</p>
       </ion-label>
       <ion-icon (click)="cliqueNoCarrinho($event)" color="primary" class="icon-acao" name="cart-outline"></ion-icon>
     </ion-item>

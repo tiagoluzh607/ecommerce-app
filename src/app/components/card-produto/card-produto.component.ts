@@ -30,4 +30,11 @@ export class CardProdutoComponent {
     cliqueNoCard(){
         console.log('abrir o modal', this.produto)
     }
+
+    formataPreco(preco: number){
+        return (preco).toLocaleString('pt-BR',{
+            style: 'currency',
+            currency: 'BRL'
+        }).replace('R$','').trim()
+    }
 }
