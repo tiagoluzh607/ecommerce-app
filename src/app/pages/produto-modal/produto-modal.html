@@ -16,8 +16,8 @@
   </ion-header>
 
   <div class="speaker-background">
-    <img src="https://drive.google.com/uc?id=192AMq6kOHvD0wOT7Zls2dwQsi1ZI_CBX" alt="Imagem">
-    <h2>Nome do Produto</h2>
+    <img [src]="produto?.imagem" alt="Imagem">
+    <h2>{{produto?.nome}}</h2>
   </div>
 
   <div class="ion-padding speaker-detail conteudo-principal">
@@ -30,9 +30,10 @@
       <ion-icon class="icon-star" name="star-outline"></ion-icon>
     </div>
     <div class="text-center">
-      <h2>R$ 24,00</h2>
+      <h2>R$ {{produto?.preco | moneyBr}}</h2>
     </div>
-    <p>Detalhes do Produto</p>
+    <h3>Detalhes do Produto</h3>
+    <p>{{produto?.descricao}}</p>
     <hr>
     <ion-button class="button-theme" expand="block">
       <ion-icon slot="start" name="card-outline"></ion-icon>

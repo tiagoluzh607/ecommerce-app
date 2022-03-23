@@ -5,6 +5,7 @@ import { Produto } from './produto.model';
     providedIn: 'root'
 })
 export class ProdutoService{
+    
 
     produtos: Produto[] = [
         {id: 1, imagem: 'https://drive.google.com/uc?id=192AMq6kOHvD0wOT7Zls2dwQsi1ZI_CBX', nome: 'Capacete Espacial', avaliacao: 5, descricao: 'Além de cobrir a cabeça de um astronauta, o capacete tem uma almofada que direciona o oxigênio para a parte superior do tronco e para a frente do capacete. O capacete mantém o oxigênio à pressão adequada ao redor da cabeça. ... Uma câmera de TV e luzes são anexadas ao capacete.', preco: 289.33},
@@ -24,6 +25,10 @@ export class ProdutoService{
 
     selectAll(){
         return this.produtos;
+    }
+
+    selectId(id: number): Produto {
+        return this.produtos.find(e=>e.id==id);
     }
 
 }
