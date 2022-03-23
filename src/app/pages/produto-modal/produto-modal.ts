@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { EcommerceDadosService } from '../../providers/ecommerce-dados.service';
 
 @Component({
@@ -8,6 +9,14 @@ import { EcommerceDadosService } from '../../providers/ecommerce-dados.service';
   })
   export class ProdutoModalPage implements OnInit {
 
-    ngOnInit(){}
+
+    constructor(
+      private activatedRoute: ActivatedRoute
+    ){}
+
+    ngOnInit(){
+      let idProdutoString = this.activatedRoute.snapshot.paramMap.get('idProduto');
+      console.log('vou buscar o produto com o id', idProdutoString);
+    }
   
   }

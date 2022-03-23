@@ -43,7 +43,7 @@ export class CardProdutoComponent {
 
     cliqueNoCard(){
         console.log('abrir o modal', this.produto);
-        this.router.navigate(['app','tabs','produto']);
+        this.router.navigate(['app','tabs','produto',this.produto.id]);
     }
 
     

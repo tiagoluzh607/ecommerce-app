@@ -86,9 +86,9 @@ const routes: Routes = [
       },
       {
         path: 'produto',
-        children: [
+        children: [  
           {
-            path: '',
+            path: ':idProduto',
             loadChildren: () => import('../produto-modal/produto-modal.module').then(m => m.ProdutoModalModule)
           }
         ]
