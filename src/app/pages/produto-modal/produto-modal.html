@@ -22,12 +22,8 @@
 
   <div class="ion-padding speaker-detail conteudo-principal">
 
-    <div class="div-avaliacao text-center">
-      <ion-icon class="icon-star" name="star"></ion-icon>
-      <ion-icon class="icon-star" name="star"></ion-icon>
-      <ion-icon class="icon-star" name="star"></ion-icon>
-      <ion-icon class="icon-star" name="star"></ion-icon>
-      <ion-icon class="icon-star" name="star-outline"></ion-icon>
+    <div class="div-avaliacao text-center div-produto-modal">
+      <avaliacao-app [avaliacao]="produto?.avaliacao"></avaliacao-app>
     </div>
     <div class="text-center">
       <h2>R$ {{produto?.preco | moneyBr}}</h2>

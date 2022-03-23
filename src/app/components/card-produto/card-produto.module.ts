@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { AvaliacaoModule } from '../avaliacao/avaliacao.module';
 import { MoneyBrModule } from '../pipes/money-br/money-br.module';
 import { CardProdutoComponent } from './card-produto.component';
 
@@ -8,7 +9,8 @@ import { CardProdutoComponent } from './card-produto.component';
 imports: [
     CommonModule,
     IonicModule,
-    MoneyBrModule
+    MoneyBrModule,
+    AvaliacaoModule
 ],
 declarations: [
     CardProdutoComponent

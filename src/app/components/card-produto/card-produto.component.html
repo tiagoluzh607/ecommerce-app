@@ -8,10 +8,8 @@
         <h2 class="title-card">{{produto.nome}}</h2>
         <div>
 
-          <ng-container *ngFor="let avaliacao of avaliacoes">
-            <ion-icon class="icon-star" name="{{avaliacao?'star':'star-outline'}}"></ion-icon>
-          </ng-container>
-
+          
+          <avaliacao-app [avaliacao]="produto?.avaliacao" ></avaliacao-app>
           
 
         </div>
