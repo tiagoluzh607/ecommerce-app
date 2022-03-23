@@ -1,0 +1,103 @@
+ion-content{
+    --background: white;
+  }
+  
+  
+  /*
+   * Speaker Background
+   */
+  
+  ion-toolbar {
+    position: absolute;
+  
+    top: 0;
+    left: 0;
+    right: 0;
+  
+    --background: transparent;
+    --color: white;
+  }
+  
+  ion-toolbar ion-button,
+  ion-toolbar ion-back-button,
+  ion-toolbar ion-menu-button {
+    --color: white;
+  }
+  
+  .speaker-background {
+    position: relative;
+  
+    display: flex;
+  
+    padding-top: var(--ion-safe-area-top);
+  
+    align-items: center;
+    justify-content: center;
+  
+    flex-direction: column;
+  
+    height: calc(250px + var(--ion-safe-area-top));
+  
+    /*background: center / cover url(/assets/img/speaker-background.png) no-repeat;*/
+    background:linear-gradient(163deg, #38f9d7, #2ad187 60%, #04d6fd);
+    background-size: 150% 150%;
+    animation: gradient 5s ease infinite
+  }
+  
+  @keyframes gradient{
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
+  }
+  
+  
+  
+  .speaker-background img {
+    width: 70px;
+    border-radius: 50%;
+    margin-top: calc(-1 * var(--ion-safe-area-top));
+  }
+  
+  .speaker-background h2 {
+    position: absolute;
+  
+    bottom: 10px;
+  
+    color: white;
+  }
+  
+  /*
+   * Speaker Details
+   */
+  
+  .speaker-detail p {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  
+  .speaker-detail hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+    background: var(--ion-color-step-150, #d7d8da);
+  }
+  
+  .conteudo-principal{
+    transform: translateY(-14px);
+    border-radius: 20px 20px 0px 0px;
+    background: white;
+  }
+  
+  
+  .div-avaliacao .icon-star{
+    width: 100%;
+    font-size: 30px;
+    max-width: 30px;
+  }
+  

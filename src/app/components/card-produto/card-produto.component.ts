@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Produto } from '../../dominio/produto/produto.model';
 
 
@@ -12,6 +13,9 @@ export class CardProdutoComponent {
     @Output() clicarNoCarrinho: EventEmitter<Produto> = new EventEmitter();
     @Output() clicarNaLixeira: EventEmitter<Produto> = new EventEmitter();
     
+    constructor(
+        private router: Router
+    ){}
     
     avaliacoes: boolean[] = [true,true,false,false,false]
 
@@ -38,7 +42,8 @@ export class CardProdutoComponent {
     }
 
     cliqueNoCard(){
-        console.log('abrir o modal', this.produto)
+        console.log('abrir o modal', this.produto);
+        this.router.navigate(['app','tabs','produto']);
     }
 
     
