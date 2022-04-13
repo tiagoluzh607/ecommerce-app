@@ -30,4 +30,8 @@ export class ProdutoService{
         return this.produtos.find(e=>e.id==id);
     }
 
+    selectIdAPI(id: number): Observable<Produto>{
+        return this.http.get<Produto>(`${this.API}/${this.endpoint}/${id}`);
+    }
+
 }

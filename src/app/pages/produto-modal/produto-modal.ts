@@ -22,9 +22,13 @@ import { EcommerceDadosService } from '../../providers/ecommerce-dados.service';
       let idProdutoString = this.activatedRoute.snapshot.paramMap.get('idProduto');
       console.log('vou buscar o produto com o id', idProdutoString);
       let idProduto = parseInt(idProdutoString);
-      let produto = this.produtoService.selectId(idProduto);
-      console.log('busquei o produto', produto);
-      this.produto = produto;
+
+      this.produtoService.selectIdAPI(idProduto).subscribe((produtoApi)=>{
+        console.log('busquei o produto', produtoApi);
+        this.produto = produtoApi;
+      });
+
+      
     }
   
   }
