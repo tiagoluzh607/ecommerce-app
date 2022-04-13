@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Produto } from './produto.model';
 
 @Injectable({
@@ -6,6 +8,9 @@ import { Produto } from './produto.model';
 })
 export class ProdutoService{
     
+    constructor(
+        private http: HttpClient
+    ){}
 
     produtos: Produto[] = [
         {id: 1, imagem: 'https://drive.google.com/uc?id=192AMq6kOHvD0wOT7Zls2dwQsi1ZI_CBX', nome: 'Capacete Espacial', avaliacao: 5, descricao: 'Além de cobrir a cabeça de um astronauta, o capacete tem uma almofada que direciona o oxigênio para a parte superior do tronco e para a frente do capacete. O capacete mantém o oxigênio à pressão adequada ao redor da cabeça. ... Uma câmera de TV e luzes são anexadas ao capacete.', preco: 289.33},
@@ -23,8 +28,12 @@ export class ProdutoService{
         {id: 13, imagem: 'https://drive.google.com/uc?id=1D5mU8iwAEruSjxOQgZKDP03ylae5e2py', nome: 'Uva Verde', avaliacao: 5, descricao: 'Controlar a glicemia, pois contém menos açúcar que as uvas roxas e é rica em vitamina B1, importante para o processamento de carboidratos no organismo; Manter a saúde dos ossos, por ser rica em vitamina K e B1, importantes para aumentar a fixação de cálcio na massa óssea.', preco: 7}, 
     ]
 
-    selectAll(){
+    selectAll(): Produto[]{
         return this.produtos;
+    }
+
+    selectAllAPI(): Observable<Produto[]>{
+        return this.http.get<Produto[]>('http://localhost:3000/produtos');
     }
 
     selectId(id: number): Produto {
