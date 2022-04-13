@@ -26,9 +26,11 @@ import { UserData } from '../../providers/user-data';
       this.speakers = speakers;
     });
 
-    this.produtos = this.produtoService.selectAll().map(p=>{
-      p.carrinho = true;
-      return p;
+    this.produtoService.selectAllAPI().subscribe((produtosApi)=>{
+        this.produtos = produtosApi.map(p=>{
+          p.carrinho = true;
+          return p;
+        });
     });
   }
 
