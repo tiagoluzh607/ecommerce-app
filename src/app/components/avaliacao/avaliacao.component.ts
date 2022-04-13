@@ -1,11 +1,11 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
     selector: 'avaliacao-app',
     templateUrl: 'avaliacao.component.html',
     styleUrls: ['avaliacao.component.scss'],
 })
-export class AvaliacaoComponent implements OnInit {
+export class AvaliacaoComponent implements OnInit, OnChanges {
 
     @Input() avaliacao: number;
 
@@ -13,6 +13,13 @@ export class AvaliacaoComponent implements OnInit {
 
     ngOnInit(){
         this.preencheAvaliacoes(this.avaliacao);
+    }
+
+    ngOnChanges(changes: SimpleChanges){
+        if(changes.avaliacao) {
+            let valorAtualizado = changes.avaliacao.currentValue
+            this.preencheAvaliacoes(valorAtualizado);
+        }
     }
 
     preencheAvaliacoes(avaliacao: number){

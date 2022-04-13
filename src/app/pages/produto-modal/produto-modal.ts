@@ -27,7 +27,6 @@ import { EcommerceDadosService } from '../../providers/ecommerce-dados.service';
         console.log('busquei o produto', produtoApi);
         this.produto = produtoApi;
       });
-
       
     }
   
