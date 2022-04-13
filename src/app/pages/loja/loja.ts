@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, Config, IonList, IonRouterOutlet, LoadingController, ModalController, ToastController } from '@ionic/angular';
+import { AvisoService } from '../../components/aviso/aviso.service';
 import { Produto } from '../../dominio/produto/produto.model';
 import { ProdutoService } from '../../dominio/produto/produto.service';
 import { ConferenceData } from '../../providers/conference-data';
@@ -41,7 +42,8 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
     public toastCtrl: ToastController,
     public user: UserData,
     public config: Config,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private avisoService: AvisoService
   ) { }
 
   ngOnInit() {
@@ -63,10 +65,12 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
         });
     },(error: HttpErrorResponse)=>{
       console.error(error);
-      if(error.status == 400) alert('Contate o Suporte Técnico');
-      else alert('Erro ao Conectar no Servidor, Verifique sua Internet!');
+      if(error.status == 400) this.avisoService.exibe('Contate o Suporte Técnico');
+      else this.avisoService.exibe('Erro ao Conectar no Servidor, Verifique sua Internet!');
     });
   }
+
+  
 
   updateSchedule() {
     // Close any open sliding items when the schedule updates
