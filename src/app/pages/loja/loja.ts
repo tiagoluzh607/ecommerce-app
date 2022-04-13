@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, Config, IonList, IonRouterOutlet, LoadingController, ModalController, ToastController } from '@ionic/angular';
@@ -60,8 +61,11 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
           p.carrinho = false;
           return p;
         });
+    },(error: HttpErrorResponse)=>{
+      console.error(error);
+      if(error.status == 400) alert('Contate o Suporte Técnico');
+      else alert('Erro ao Conectar no Servidor, Verifique sua Internet!');
     });
-
   }
 
   updateSchedule() {
