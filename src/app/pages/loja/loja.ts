@@ -59,10 +59,7 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 
 
     this.produtoService.selectAllAPI().subscribe((produtosApi)=>{
-        this.produtos = produtosApi.map(p=>{
-          p.carrinho = false;
-          return p;
-        });
+        this.produtos = produtosApi;
     },(error: HttpErrorResponse)=>{
       console.error(error);
       if(error.status == 400) this.avisoService.exibe('Contate o Suporte Técnico');

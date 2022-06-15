@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Subject } from "rxjs";
+import { BehaviorSubject, Subject } from "rxjs";
 import { map } from "rxjs/operators";
 import { Produto } from "../produto/produto.model";
 
@@ -8,7 +8,7 @@ import { Produto } from "../produto/produto.model";
 })
 export class CarrinhoEmissor{
 
-    subject = new Subject<Produto[]>();
+    subject = new BehaviorSubject<Produto[]>(null);
     produtos: Produto[] = [];
     ultimoAdicionado: Produto;
 
