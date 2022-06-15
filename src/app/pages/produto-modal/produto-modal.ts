@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CarrinhoEmissor } from '../../dominio/carrinho/carrinho-emissor';
 import { Produto } from '../../dominio/produto/produto.model';
 import { ProdutoService } from '../../dominio/produto/produto.service';
 import { EcommerceDadosService } from '../../providers/ecommerce-dados.service';
@@ -15,7 +16,8 @@ import { EcommerceDadosService } from '../../providers/ecommerce-dados.service';
 
     constructor(
       private activatedRoute: ActivatedRoute,
-      private produtoService: ProdutoService
+      private produtoService: ProdutoService,
+      private carrinhoEmissor: CarrinhoEmissor
     ){}
 
     ngOnInit(){
@@ -29,5 +31,15 @@ import { EcommerceDadosService } from '../../providers/ecommerce-dados.service';
       });
       
     }
+
+    adicionaNoCarrinho(){
+      this.carrinhoEmissor.add(this.produto);
+    }
+
+    removeDoCarrinho(){
+      this.carrinhoEmissor.remove(this.produto);
+    }
+
+
   
   }

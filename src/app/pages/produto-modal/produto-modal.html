@@ -35,11 +35,11 @@
       <ion-icon slot="start" name="card-outline"></ion-icon>
       Comprar
     </ion-button>
-    <ion-button class="button-theme" expand="block">
+    <ion-button *ngIf="produto && !produto.carrinho"  (click)="adicionaNoCarrinho()" class="button-theme" expand="block">
       <ion-icon slot="start" name="cart-outline"></ion-icon>
       Adicionar ao Carrinho
     </ion-button>
-    <ion-button class="button-theme-outline" expand="block" fill="outline" >
+    <ion-button *ngIf="produto && produto.carrinho"  (click)="removeDoCarrinho()" class="button-theme-outline" expand="block" fill="outline" >
       <ion-icon slot="start" name="trash-bin-outline"></ion-icon>
       Remover do Carrinho
     </ion-button>
