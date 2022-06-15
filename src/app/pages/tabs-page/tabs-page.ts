@@ -15,11 +15,9 @@ export class TabsPage implements OnInit {
 
   ngOnInit(){
 
-    this.carrinhoEmissor.get().pipe(
-      filter((produtos)=>!!produtos)
-    )
-    .subscribe((produtos)=>{
-      this.totalItensCarrinho = produtos.length;
+    this.carrinhoEmissor.getTotal()
+    .subscribe((totalItens)=>{
+      this.totalItensCarrinho = totalItens;
     });
   }
 

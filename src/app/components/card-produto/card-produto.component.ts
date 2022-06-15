@@ -30,6 +30,7 @@ export class CardProdutoComponent {
     cliqueNaLixeira(event: Event){
         event.stopPropagation();
         console.log('tirar do carrinho', this.produto);
+        this.carrinhoEmissor.remove(this.produto);
         this.clicarNaLixeira.emit(this.produto);
     }
 
