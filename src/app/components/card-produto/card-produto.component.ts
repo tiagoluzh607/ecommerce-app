@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { CarrinhoEmissor } from '../../dominio/carrinho/carrinho-emissor';
 import { Produto } from '../../dominio/produto/produto.model';
 
 
@@ -14,13 +15,15 @@ export class CardProdutoComponent {
     @Output() clicarNaLixeira: EventEmitter<Produto> = new EventEmitter();
     
     constructor(
-        private router: Router
+        private router: Router,
+        private carrinhoEmissor: CarrinhoEmissor
     ){}
     
 
     cliqueNoCarrinho(event: Event){
         event.stopPropagation();
         console.log('adicinar no carrinho', this.produto);
+        this.carrinhoEmissor.add(this.produto);
         this.clicarNoCarrinho.emit(this.produto);
     }
 

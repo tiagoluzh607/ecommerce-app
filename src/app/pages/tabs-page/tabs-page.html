@@ -9,6 +9,7 @@
     <ion-tab-button tab="carrinho">
       <ion-icon name="cart-outline"></ion-icon>
       <ion-label>Carrinho</ion-label>
+      <ion-badge *ngIf="totalItensCarrinho">{{totalItensCarrinho}}</ion-badge>
     </ion-tab-button>
 
     <ion-tab-button tab="endereco">
