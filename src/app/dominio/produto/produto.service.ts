@@ -35,7 +35,7 @@ export class ProdutoService{
                 if(!produtosApi) return produtosApi;
                 if(!produtosCarrinho) return produtosApi;
                 return produtosApi.map(pA=>{
-                    pA.carrinho = !!produtosCarrinho.find(pC=>pC.id==pA.id);
+                    this.preencheProdutoApiConformeProdutosDoCarrinho(pA,produtosCarrinho);
                     return pA;
                 });
             })
@@ -51,7 +51,23 @@ export class ProdutoService{
     }
 
     selectIdAPI(id: number): Observable<Produto>{
-        return this.http.get<Produto>(`${this.API}/${this.endpoint}/${id}`);
+
+        return combineLatest(
+            this.http.get<Produto>(`${this.API}/${this.endpoint}/${id}`),
+            this.carrinhoEmissor.get()
+        ).pipe(
+            map(([produtoApi, produtosCarrinho])=>{
+                if(!produtoApi) return produtoApi;
+                if(!produtosCarrinho) return produtoApi;
+                this.preencheProdutoApiConformeProdutosDoCarrinho(produtoApi,produtosCarrinho);
+                return produtoApi;
+            })
+        );
+    }
+
+    private preencheProdutoApiConformeProdutosDoCarrinho(produtoApi: Produto, produtosCarrinho: Produto[]){
+        produtoApi.carrinho = !!produtosCarrinho.find(pC=>pC.id==produtoApi.id);
+        return produtoApi;
     }
 
 }
